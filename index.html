@@ -100,25 +100,30 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Hammer.js -->
+    <script src="js/hammer.min.js"></script>
+
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        if (isMenuOpen()) {
-            $("#wrapper").toggleClass("toggled");
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
-        } else {
-            $("#wrapper").toggleClass("toggled");
-            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
-        }
-
-    });
+    // $("#menu-toggle").click(function(e) {
+    //     e.preventDefault();
+    //     if (isMenuOpen()) {
+    //         $("#wrapper").toggleClass("toggled");
+    //         $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+    //     } else {
+    //         $("#wrapper").toggleClass("toggled");
+    //         $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+    //     }
+    //
+    // });
     $("#page-content").click(function(e) {
         e.preventDefault();
-        console.log("huh?");
-        if (isMenuOpen()) {
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
-            $("#wrapper").toggleClass("toggled");
+        if ($(window).width() < 768) {
+            console.log("huh?");
+            if (isMenuOpen()) {
+                $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+                $("#wrapper").toggleClass("toggled");
+            }
         }
     });
 
@@ -126,10 +131,13 @@
         return !($("#wrapper").css("padding-left") == "0px");
     }
 
-    $("#page-content").on("swipe",function(){
-        if (isMenuOpen()) {
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+    var hammertime = new Hammer(document.getElementById("page-content"));
+        hammertime.on('swipe', function(ev) {
+        console.log(ev);
+        if (!isMenuOpen()) {
+            console.log("hello");
             $("#wrapper").toggleClass("toggled");
+            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
         }
     });
     </script>
