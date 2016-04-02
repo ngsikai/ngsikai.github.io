@@ -68,6 +68,10 @@ a:hover {
     border-bottom: 1px dotted #999999;
 }
 
+.glyphicon {
+    color: #212121;
+}
+
 
 body {
     overflow-x: hidden;
