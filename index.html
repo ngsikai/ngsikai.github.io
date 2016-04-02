@@ -49,7 +49,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" id="page-content">
@@ -105,17 +105,20 @@
 
     <!-- Menu Toggle Script -->
     <script>
-    // $("#menu-toggle").click(function(e) {
-    //     e.preventDefault();
-    //     if (isMenuOpen()) {
-    //         $("#wrapper").toggleClass("toggled");
-    //         $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
-    //     } else {
-    //         $("#wrapper").toggleClass("toggled");
-    //         $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
-    //     }
-    //
-    // });
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        if ($(window).width() < 768) {
+            if (isMenuOpen()) {
+                $("#wrapper").toggleClass("toggled");
+                $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+            } else {
+                $("#wrapper").toggleClass("toggled");
+                $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+            }
+        }
+
+    });
+
     $("#page-content").click(function(e) {
         e.preventDefault();
         if ($(window).width() < 768) {
