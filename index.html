@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0'">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -143,7 +143,7 @@
     });
     hammertime.on('swipeleft', function(ev) {
         if ($(window).width() < 768) {
-            if (!isMenuOpen()) {
+            if (isMenuOpen()) {
                 $("#wrapper").toggleClass("toggled");
                 $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
             }
