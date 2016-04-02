@@ -13,7 +13,6 @@ $("#menu-toggle").click(function(e) {
 });
 
 $("#page-content").click(function(e) {
-    e.preventDefault();
     if ($(window).width() < 768) {
         if (isMenuOpen()) {
             $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
