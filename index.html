@@ -132,12 +132,18 @@
     }
 
     var hammertime = new Hammer(document.getElementById("page-content"));
-        hammertime.on('swipe', function(ev) {
-        console.log(ev);
+    hammertime.on('swiperight', function(ev) {
         if (!isMenuOpen()) {
-            console.log("hello");
             $("#wrapper").toggleClass("toggled");
             $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+        }
+    });
+    hammertime.on('swipeleft', function(ev) {
+        if ($(window).width() < 768) {
+            if (!isMenuOpen()) {
+                $("#wrapper").toggleClass("toggled");
+                $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+            }
         }
     });
     </script>
