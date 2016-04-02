@@ -104,16 +104,16 @@ h1 {
 }
 
 #wrapper.toggled {
-    padding-left: 150px;
+    padding-left: 170px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 150px;
+    left: 170px;
     width: 0;
     height: 100%;
-    margin-left: -150px;
+    margin-left: -170px;
     overflow-y: auto;
     background: #000;
     -webkit-transition: all 0.125s ease;
@@ -123,7 +123,7 @@ h1 {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 150px;
+    width: 170px;
 }
 
 #page-content-wrapper {
@@ -134,7 +134,7 @@ h1 {
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -150px;
+    margin-right: -170px;
 }
 
 /* Sidebar Styles */
@@ -151,7 +151,7 @@ h1 {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 150px;
+    width: 170px;
     margin: 0;
     padding: 0;
     list-style: none;
