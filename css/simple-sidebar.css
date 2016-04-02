@@ -14,20 +14,20 @@ body {
     position: fixed;
 	z-index: 10;
 
-	-webkit-transition: opacity 0.2s ease 0.2s;
+	/*-webkit-transition: opacity 0.2s ease 0.2s;
 	   -moz-transition: opacity 0.2s ease 0.2s;
 	    -ms-transition: opacity 0.2s ease 0.2s;
 	     -o-transition: opacity 0.2s ease 0.2s;
-	        transition: opacity 0.2s ease 0.2s;
+	        transition: opacity 0.2s ease 0.2s;*/
     top: 50%;
 }
 
 #wrapper {
     padding-left: 0;
-    -webkit-transition: all 0.25s ease;
+    /*-webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+    transition: all 0.25s ease;*/
 }
 
 #wrapper.toggled {
@@ -43,10 +43,10 @@ body {
     margin-left: -150px;
     overflow-y: auto;
     background: #000;
-    -webkit-transition: all 0.25s ease;
+    /*-webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+    transition: all 0.25s ease;*/
 }
 
 #wrapper.toggled #sidebar-wrapper {
