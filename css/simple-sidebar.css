@@ -112,7 +112,7 @@ h1 {
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 0;
     position: fixed;
     left: 170px;
     width: 0;
@@ -131,6 +131,10 @@ h1 {
 }
 
 #page-content-wrapper {
+    -moz-box-shadow:2px 2px 8px 2px black;
+    -webkit-box-shadow:2px 2px 8px 2px black;
+    box-shadow:2px 2px 8px 2px black;
+    z-index: 10;
     width: 100%;
     position: absolute;
     padding: 15px;

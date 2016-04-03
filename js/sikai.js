@@ -3,10 +3,10 @@ $("#menu-toggle").click(function(e) {
     if ($(window).width() < 768) {
         if (isMenuOpen()) {
             $("#wrapper").toggleClass("toggled");
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
         } else {
             $("#wrapper").toggleClass("toggled");
-            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
         }
     }
 
@@ -15,7 +15,7 @@ $("#menu-toggle").click(function(e) {
 $("#page-content").click(function(e) {
     if ($(window).width() < 768) {
         if (isMenuOpen()) {
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
             $("#wrapper").toggleClass("toggled");
         }
     }
@@ -29,14 +29,14 @@ var hammertime = new Hammer(document.getElementById("page-content"), {threshold:
 hammertime.on('swiperight', function(ev) {
     if (!isMenuOpen()) {
         $("#wrapper").toggleClass("toggled");
-        $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+        $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
     }
 });
 hammertime.on('swipeleft', function(ev) {
     if ($(window).width() < 768) {
         if (isMenuOpen()) {
             $("#wrapper").toggleClass("toggled");
-            $("#menu-toggle span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+            $("#menu-toggle span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
         }
     }
 });
