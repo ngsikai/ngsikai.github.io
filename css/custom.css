@@ -1,0 +1,28 @@
+.top-buffer {
+    margin-top: 20px;
+}
+.bottom-buffer {
+    margin-bottom: 20px;
+}
+.img-outline {
+    -webkit-filter: drop-shadow(2px 2px 0 rgb(6,34,28))
+    drop-shadow(-2px -2px 0 rgb(6,34,28))
+    drop-shadow(2px -2px 0 rgb(6,34,28))
+    drop-shadow(-2px 2px 0 rgb(6,34,28));
+    filter: drop-shadow(2px 2px 0 rgb(6,34,28))
+    drop-shadow(-2px -2px 0 rgb(6,34,28))
+    drop-shadow(2px -2px 0 rgb(6,34,28))
+    drop-shadow(-2px 2px 0 rgb(6,34,28));
+}
+
+.img-btn:hover {
+    -webkit-filter: drop-shadow(2px 2px 0 rgb(6,34,28))
+    drop-shadow(-2px -2px 0 rgb(6,34,28))
+    drop-shadow(2px -2px 0 rgb(6,34,28))
+    drop-shadow(-2px 2px 0 rgb(6,34,28));
+    filter: drop-shadow(2px 2px 0 rgb(17, 121, 99))
+    drop-shadow(-2px -2px 0 rgb(17, 121, 99))
+    drop-shadow(2px -2px 0 rgb(17, 121, 99))
+    drop-shadow(-2px 2px 0 rgb(17, 121, 99));
+    transition: filter 0.1s ease-in-out;
+}
